@@ -1,0 +1,1 @@
+require_relative '../../pages_objects/pages/home_page'
