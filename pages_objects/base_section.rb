@@ -3,6 +3,6 @@
 require 'site_prism'
 require 'capybara/dsl'
 
-class BasePage < SitePrism::Page
+class BaseSection < SitePrism::Section
 
 end

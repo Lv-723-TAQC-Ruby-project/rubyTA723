@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative '../base_page'
+require_relative '../../base_section'
 
-class HeaderComponent < BasePage
+class HeaderComponent < BaseSection
 
   element :search_field_element,:xpath, "//div[@id='gh-ac-box']//input[@type='text']"
   element :advanced_search_link, :xpath, "//td[@id='gh-as-td']"
