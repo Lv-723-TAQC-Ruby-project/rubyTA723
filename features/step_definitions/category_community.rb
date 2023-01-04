@@ -1,10 +1,9 @@
-
 When('I click category community') do
   @home_page.click_category_community_button
 end
 
 When('I type {string} in community search field') do |key_word|
-  @category_community_page=CategoryCommunityPage.new
+  @category_community_page = CategoryCommunityPage.new
   @category_community_page.type_key_word_field(key_word)
 end
 

@@ -1,4 +1,3 @@
-
 When('I open EBAY home page') do
   @home_page = HomePage.new
   @home_page.load()
