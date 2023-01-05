@@ -11,5 +11,6 @@ class HomePage < BasePageWithHeader
     category_community_button.click
   end
 
+
 end
 
