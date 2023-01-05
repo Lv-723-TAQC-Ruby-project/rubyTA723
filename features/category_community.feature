@@ -1,6 +1,6 @@
-Feature: Community search by kye word
+Feature: Community search by keyword
 
-  Example: Search by kye word
+  Example: Search by keyword
     When I open EBAY home page
     And I click category community
     And I type "car" in community search field
