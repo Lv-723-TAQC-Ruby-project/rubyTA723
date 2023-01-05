@@ -40,3 +40,26 @@ Then("I should see {string} text in the search results") do |expected_title|
   expect(page).to have_content(expected_title)
 end
 
+And("I click 'By seller' link") do
+  @advanced_search_page.click_by_sellers_link
+end
+
+And("I click 'Only show items from' checkbox") do
+  @advanced_search_page.click_show_items_from_checkbox
+end
+
+And("I enter {string} in the seller name field") do |seller_name|
+  @advanced_search_page.enter_in_sellers_field(seller_name)
+end
+
+And("I click 'Sellers with eBay stores' radiobutton") do
+  @advanced_search_page.click_sellers_with_ebay_stores_radiobutton
+end
+
+And("I click bottom search button") do
+  @advanced_search_page.click_search_button_bottom
+end
+
+Then("I should see {string} in the parameters of search on the result page") do |expected_seller|
+  expect(page).to have_content(expected_seller)
+end

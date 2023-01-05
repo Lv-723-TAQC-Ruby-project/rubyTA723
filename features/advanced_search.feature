@@ -14,3 +14,14 @@ Feature: Advanced search
     And I enter "Samsung" in the 'Enter Store name or keywords' field
     And I click on the search button
     Then I should see "Welcome to the official Samsung Store!" text in the search results
+
+  Example: Find by seller
+    When I open EBAY home page
+    And I click 'Advanced' search link
+    And I click 'By seller' link
+    And I click 'Only show items from' checkbox
+    And I enter "Samsung" in the seller name field
+    And I click 'Sellers with eBay stores' radiobutton
+    And I click bottom search button
+    Then I should see "Samsung" in the parameters of search on the result page
+
