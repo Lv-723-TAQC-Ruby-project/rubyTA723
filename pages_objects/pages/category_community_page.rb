@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class CategoryCommunityPage < BasePageWithHeader
-
   element :key_word_field, "input[name='messageSearchField']"
   element :search_button, "input[name='submitContext'] "
 
@@ -12,5 +11,4 @@ class CategoryCommunityPage < BasePageWithHeader
   def click_search_button
     search_button.click
   end
-
 end
