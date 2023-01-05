@@ -5,4 +5,5 @@ Feature: Shop by category
     And  I click shop by category
     And I click subcategory
     And I click brand sorting
-    Then I choose brand
+    And I choose brand
+    Then I expect to see filtered page

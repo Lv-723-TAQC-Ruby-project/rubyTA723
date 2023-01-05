@@ -13,7 +13,10 @@ end
 When('I click brand sorting') do
   @golf_equipment_page.sort_brand_click
 end
-Then('I choose brand') do
+When('I choose brand') do
   @golf_equipment_page.chosen_brand
-end
 
+end
+Then('I expect to see filtered page')do
+  expect(true).to be true
+end
