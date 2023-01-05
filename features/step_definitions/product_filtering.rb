@@ -3,11 +3,6 @@ When('I go to the EBAY home page') do
   @home_page.load()
 end
 
-
-When('I type {string} in search field') do |text|
-  @home_page.header.type_to_search_field(text)
-end
-
 When('I click on search button') do
   @home_page.header.click_search_button
   @phone_page = PhonePage.new
