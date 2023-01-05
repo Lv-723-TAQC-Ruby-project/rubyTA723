@@ -12,7 +12,7 @@ When("I click 'Find Stores' link") do
   @advanced_search_page.click_find_stores_button
 end
 
-When("I enter store name in {string} field") do |store_name|
+When("I enter {string} in the 'Enter Store name or keywords' field") do |store_name|
   @advanced_search_page.enter_in_enter_store_name_field(store_name)
 end
 

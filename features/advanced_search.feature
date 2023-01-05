@@ -11,6 +11,6 @@ Feature: Advanced search
     When I open EBAY home page
     And I click 'Advanced' search link
     And I click 'Find Stores' link
-    And I enter store name in "Samsung" field
+    And I enter "Samsung" in the 'Enter Store name or keywords' field
     And I click on the search button
     Then I should see "Welcome to the official Samsung Store!" text in the search results
