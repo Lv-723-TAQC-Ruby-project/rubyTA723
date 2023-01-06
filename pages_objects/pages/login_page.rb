@@ -11,22 +11,25 @@ class LoginPage < BasePageWithHeader
   element :login_button, "button[id='sgnBt']"
 
   def login(email, password)
-    text_found = false
+    check_capcha
 
-    while !text_found
-      if page.has_text?("Hello")
-        text_found = true
-      else
-        sleep 1
-      end
-    end
     username_field.set(email)
     continue_button.click
 
     password_field.set(password)
     login_button.click
 
-    if has_text?("Tired of passwords?\nDepending on your device, you can sign in with your fingerprint, face, or PIN.\nTurn on\nMaybe later\n\nDon't ask me again\nCopyright © 1995-2023 eBay Inc. All Rights Reserved. Accessibility, User Agreement, Privacy, Payments Terms of Use, Cookies, Do not sell my personal information and AdChoice")
+    check_banner
+  end
+
+  def check_capcha
+    while page.has_text?("Please verify yourself to continue")
+      sleep 1
+    end
+  end
+
+  def check_banner
+    if page.has_text?("Tired of passwords?")
       click_on("Don't ask me again")
     end
   end
