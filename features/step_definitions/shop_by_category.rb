@@ -1,5 +1,6 @@
 When('I visit EBAY home page') do
   @home_page = HomePage.new
+  # require 'pry';binding.pry
   @home_page.load()
 end
 

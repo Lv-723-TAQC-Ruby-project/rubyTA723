@@ -1,6 +1,7 @@
 require 'capybara'
 require 'capybara/cucumber'
 require 'selenium-webdriver'
+require 'webdrivers'
 
 browser = ENV.fetch('BROWSER', 'chrome').to_sym
 

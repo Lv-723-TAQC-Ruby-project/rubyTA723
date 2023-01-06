@@ -6,6 +6,7 @@ gem "cucumber"
 gem "capybara"
 gem "pry"
 gem "selenium-webdriver"
+gem "webdrivers"
 gem "rspec"
 gem "site_prism"
 
