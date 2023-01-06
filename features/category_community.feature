@@ -1,4 +1,4 @@
-Feature: Community search by kye word
+Feature: Community search by keyword
 
   Example: Search by kye word
     When I visit EBAY home page

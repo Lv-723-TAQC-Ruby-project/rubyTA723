@@ -1,6 +1,6 @@
 When('I open EBAY home page') do
   @home_page = HomePage.new
-  @home_page.load()
+  @home_page.load
 end
 
 When("I click 'Advanced' search link") do
@@ -9,8 +9,20 @@ When("I click 'Advanced' search link") do
 end
 
 When("I click 'Find Stores' link") do
-  @advanced_search_page.click_find_stores_button
+  @advanced_search_page.click_find_stores_link
 end
+
+When("I click 'Find Items' link") do
+  @advanced_search_page.click_find_items_link
+end
+
+# When(/^I click ('Find Stores'|'Find Items') link$/) do |link_name|
+#   if link_name == 'Find Stores'
+#     @advanced_search_page.click_find_stores_link
+#   else
+#     @advanced_search_page.click_find_items_link
+#   end
+# end
 
 When("I enter {string} in the 'Enter Store name or keywords' field") do |store_name|
   @advanced_search_page.enter_in_enter_store_name_field(store_name)
