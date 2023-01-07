@@ -5,8 +5,8 @@ When('I open section of languages') do
   sleep(1)
 end
 
-When('I select Germany language') do
-  @home_page.click_German_language_button
+When('I select {string}') do |name|
+  @home_page.click_language_button(name)
 end
 
 When('I expect to see {string} in browser title') do |title|

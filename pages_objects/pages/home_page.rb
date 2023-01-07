@@ -6,7 +6,7 @@ class HomePage < BasePageWithHeader
   set_url "/"
   element :category_community_button, "a[href='https://community.ebay.com'][class='gf-bttl thrd']"
   element :section_of_languages_button_element, "a[id='gf-fbtn']"
-  element :language_German_button_element, :xpath,"//*[text()='Germany']"
+
 
 
   def click_category_community_button
@@ -17,12 +17,9 @@ class HomePage < BasePageWithHeader
     section_of_languages_button_element.click
   end
 
-  def click_German_language_button
-    language_German_button_element.click
+  def click_language_button(language)
+    find(:xpath,"//*[text()='#{language}']").click
   end
-
-
-
 
 end
 
