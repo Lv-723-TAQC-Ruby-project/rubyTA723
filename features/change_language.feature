@@ -2,10 +2,15 @@
 Feature: Change language interface of site
 
 
-  Scenario: Successful change language
+  Scenario Outline: : Successful change language
     When I open EBAY home page
     And I open section of languages
-    And I select German language
-    Then I should see "Elektronik, Autos, Mode, Sammlerstücke, Möbel und mehr Online-Shopping | eBay" in browser title
+    And I select <language>
+    Then I expect to see <expected title> in browser title
 
+    Examples:
+      |language  |expected title                                                          |
+      |"Germany" |"Elektronik, Autos, Mode, Sammlerstücke, Möbel und mehr Online-Shopping"|
+      |"France"  |"eBay : high-tech, maison, jardin, auto-moto et bien plus"              |
+      |"Japan"   |"【公式】eBayの越境ECで、国境を越え世界へ。｜イーベイ・ジャパン"                  |
 
