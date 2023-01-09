@@ -20,7 +20,7 @@ end
 Capybara.configure do |config|
 
   config.default_driver = :site_prism
-  config.app_host = "https://www.ebay.com/"
+  config.app_host = BASE_URL
   config.default_max_wait_time = 10
 
 end
