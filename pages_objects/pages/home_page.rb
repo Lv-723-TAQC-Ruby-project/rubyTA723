@@ -8,6 +8,7 @@ class HomePage < BasePageWithHeader
   element :section_of_languages_button_element, "a[id='gf-fbtn']"
 
   def click_category_community_button
+    sleep(8)
     category_community_button.click
   end
 
