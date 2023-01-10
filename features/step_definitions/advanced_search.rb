@@ -25,11 +25,11 @@ end
 # end
 
 When("I enter {string} in the 'Enter Store name or keywords' field") do |store_name|
-  @advanced_search_page.enter_in_enter_store_name_field(store_name)
+  @advanced_search_page.enter_in_store_name_field(store_name)
 end
 
 When("I enter item number {string} in the 'Enter keywords or item number' field") do |item_number|
-  @advanced_search_page.enter_in_enter_item_number_field(item_number)
+  @advanced_search_page.enter_in_item_number_field(item_number)
 end
 
 When("I click on the search button") do

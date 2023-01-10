@@ -15,7 +15,7 @@ class AdvancedSearchPage < BasePageWithHeader
   element :sellers_with_ebay_stores_radiobutton, :xpath, "//input[@id='LH_SellerWithStore_id']"
 
   element :search_button, :xpath, "//button[contains(text(),'Search')]", match: :first
-  element :search_button_bottom, :xpath, "//button[contains(text(),'Search')]", match: :last
+  element :search_button_bottom, :xpath, "//button[@id='searchBtnLowerLnk']"
 
   def click_find_stores_link
     find_stores_link.click
