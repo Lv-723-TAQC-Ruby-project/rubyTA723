@@ -9,5 +9,6 @@ gem "selenium-webdriver"
 gem "webdrivers"
 gem "rspec"
 gem "site_prism"
+gem 'poltergeist'
 
 # gem "rest-client"

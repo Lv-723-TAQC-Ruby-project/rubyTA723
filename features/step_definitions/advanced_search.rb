@@ -65,24 +65,21 @@ Then("I should see {string} in the parameters of search on the result page") do 
 end
 
 And("I click hint search tips") do
-  # @advanced_search_page.click_search_tips_link
-  # @hint = @advanced_search_page.switch_to_window { title == 'General search tips' }
-  @hint_window = window_opened_by do
-    @advanced_search_page.click_search_tips_link
-  end
+  @advanced_search_page.click_search_tips_link
+  @hint = @advanced_search_page.switch_to_window { title == 'General search tips' }
+  # expect(current_url).to eq("https://www.ebay.com/pages/ua/help/buy/contextual/search_tips.html")
 end
 
 And("I click hint using advanced search options") do
   @advanced_search_page.click_advanced_search_options
   @hint_advanced = @advanced_search_page.switch_to_window { title == 'Advanced search | eBay' }
+  #  expect(current_url).to eq("https://www.ebay.com/help/buying/search-tips/advanced-search?id=4049")
 end
 
 Then("I should see search tips hint page with {string} title") do |expected_content|
-  within_window(@hint_window) do
-  expect(@hint_window).to have_content(expected_content)
-  end
+  expect(page).to have_content(expected_content)
 end
 
-Then('I should see search tips advanced hint page with {string} title') do |expected_title|
-  expect(@hint_advanced).to have_content(expected_title)
+Then('I should see search tips advanced hint page with {string} text') do |expected_text|
+  expect(page).to have_content(expected_text)
 end

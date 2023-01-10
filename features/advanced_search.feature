@@ -34,7 +34,7 @@ Feature: Advanced search
     When I open EBAY home page
     And I click 'Advanced' search link
     And I click hint using advanced search options
-    Then I should see search tips advanced hint page with "Customer service" title
+    Then I should see search tips advanced hint page with "Customer Service" text
 
   Example: Search tips link checking
     When I open EBAY home page
