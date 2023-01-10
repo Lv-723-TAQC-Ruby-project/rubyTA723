@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 When('I click category community') do
   @home_page.click_category_community_button
 end
@@ -14,6 +16,7 @@ end
 Then('I should see {string} in result search') do |result_search|
   expect(page).to have_content(result_search)
 end
+<<<<<<< HEAD
 
 
 
@@ -48,3 +51,5 @@ Then('I should see {string} in opened field') do |word|
 end
 
 
+=======
+>>>>>>> 7fe68e358b7df97faccbc365d499f08eeac4d79e

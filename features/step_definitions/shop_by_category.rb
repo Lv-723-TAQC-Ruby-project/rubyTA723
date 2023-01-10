@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 When('I visit EBAY home page') do
   @home_page = HomePage.new
   # require 'pry';binding.pry
-  @home_page.load()
+  @home_page.load
 end
 
 When('I click shop by category') do
@@ -16,8 +18,7 @@ When('I click brand sorting') do
 end
 When('I choose brand') do
   @golf_equipment_page.chosen_brand
-
 end
-Then('I expect to see filtered page')do
+Then('I expect to see filtered page') do
   expect(true).to be true
 end
