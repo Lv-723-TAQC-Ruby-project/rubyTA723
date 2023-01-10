@@ -3,7 +3,6 @@
 require_relative '../../base_section'
 
 class HeaderComponent < BaseSection
-
   element :search_field_element, :xpath, "//div[@id='gh-ac-box']//input[@type='text']"
   element :advanced_search_link, :xpath, "//td[@id='gh-as-td']"
   element :shop_by_category, :xpath, "//button[@id='gh-shop-a']"
@@ -28,4 +27,7 @@ class HeaderComponent < BaseSection
   def click_search_button
     search_button.click
   end
+
 end
+
+
