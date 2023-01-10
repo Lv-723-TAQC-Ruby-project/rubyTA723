@@ -6,6 +6,8 @@ class AdvancedSearchPage < BasePageWithHeader
   element :by_seller_link, :xpath, "//a[contains(text(),'By seller')]"
   element :by_item_number_link, :xpath, "//a[contains(text(),'By item number')]"
   element :items_in_store_link, :xpath, "//a[contains(text(),'Items in stores')]"
+  element :search_tips_link, :xpath, "//a[@class='learnmore']", match: :first
+  element :advanced_search_options_link, :xpath, "//a[contains(text(),'using advanced search options')]"
 
   element :enter_item_number_field, :xpath, "//input[@id='_nkw']"
   element :enter_store_name_field, :xpath, "//input[@id='store_search']"
@@ -16,6 +18,14 @@ class AdvancedSearchPage < BasePageWithHeader
 
   element :search_button, :xpath, "//button[contains(text(),'Search')]", match: :first
   element :search_button_bottom, :xpath, "//button[@id='searchBtnLowerLnk']"
+
+  def click_search_tips_link
+    search_tips_link.click
+  end
+
+  def click_advanced_search_options
+    advanced_search_options_link.click
+  end
 
   def click_find_stores_link
     find_stores_link.click
