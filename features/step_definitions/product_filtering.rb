@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 When('I go to the EBAY home page') do
   @home_page = HomePage.new
-  @home_page.load()
+  @home_page.load
 end
 
 When('I click on search button') do
@@ -17,5 +19,3 @@ end
 Then('I should save this search results') do
   @phone_page.click_save_result_button
 end
-
-

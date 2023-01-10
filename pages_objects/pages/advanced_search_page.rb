@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../base_page_with_header'
 
 class AdvancedSearchPage < BasePageWithHeader

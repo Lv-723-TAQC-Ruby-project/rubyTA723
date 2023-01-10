@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 When('I open EBAY home page') do
   @home_page = HomePage.new
   @home_page.load
@@ -32,11 +34,11 @@ When("I enter item number {string} in the 'Enter keywords or item number' field"
   @advanced_search_page.enter_in_item_number_field(item_number)
 end
 
-When("I click on the search button") do
+When('I click on the search button') do
   @advanced_search_page.click_search_button
 end
 
-Then("I should see {string}") do |expected_title|
+Then('I should see {string}') do |expected_title|
   expect(page).to have_content(expected_title)
 end
 
@@ -48,7 +50,7 @@ And("I click 'Only show items from' checkbox") do
   @advanced_search_page.click_show_items_from_checkbox
 end
 
-And("I enter {string} in the seller name field") do |seller_name|
+And('I enter {string} in the seller name field') do |seller_name|
   @advanced_search_page.enter_in_sellers_field(seller_name)
 end
 
@@ -56,27 +58,27 @@ And("I click 'Sellers with eBay stores' radiobutton") do
   @advanced_search_page.click_sellers_with_ebay_stores_radiobutton
 end
 
-And("I click bottom search button") do
+And('I click bottom search button') do
   @advanced_search_page.click_search_button_bottom
 end
 
-Then("I should see {string} in the parameters of search on the result page") do |expected_seller|
+Then('I should see {string} in the parameters of search on the result page') do |expected_seller|
   expect(page).to have_content(expected_seller)
 end
 
-And("I click hint search tips") do
+And('I click hint search tips') do
   @advanced_search_page.click_search_tips_link
   @hint = @advanced_search_page.switch_to_window { title == 'General search tips' }
   # expect(current_url).to eq("https://www.ebay.com/pages/ua/help/buy/contextual/search_tips.html")
 end
 
-And("I click hint using advanced search options") do
+And('I click hint using advanced search options') do
   @advanced_search_page.click_advanced_search_options
   @hint_advanced = @advanced_search_page.switch_to_window { title == 'Advanced search | eBay' }
   #  expect(current_url).to eq("https://www.ebay.com/help/buying/search-tips/advanced-search?id=4049")
 end
 
-Then("I should see search tips hint page with {string} title") do |expected_content|
+Then('I should see search tips hint page with {string} title') do |expected_content|
   expect(page).to have_content(expected_content)
 end
 

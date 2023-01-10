@@ -3,7 +3,7 @@
 require_relative '../base_page_with_header'
 
 class HomePage < BasePageWithHeader
-  set_url ""
+  set_url ''
   element :category_community_button, "a[href='https://community.ebay.com'][class='gf-bttl thrd']"
   element :section_of_languages_button_element, "a[id='gf-fbtn']"
 
@@ -16,8 +16,6 @@ class HomePage < BasePageWithHeader
   end
 
   def click_language_button(language)
-    find(:xpath,"//*[text()='#{language}']").click
+    find(:xpath, "//*[text()='#{language}']").click
   end
-
 end
-
