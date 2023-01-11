@@ -1,8 +1,24 @@
 # frozen_string_literal: true
 
-When('I go to the EBAY home page') do
+# When('I go to the EBAY home page') do
+#   @home_page = HomePage.new
+#   @home_page.load
+# end
+#
+
+Given('I go to eBay login page') do
+  @login_page = LoginPage.new
+  @login_page.load
+end
+
+When('I write my username and password') do
+  @login_page.login(LOGIN, PASSWORD)
   @home_page = HomePage.new
   @home_page.load
+end
+
+When('I type {string} word in search field') do |search_word|
+  @home_page.header.type_to_search_field(search_word)
 end
 
 When('I click on search button') do
@@ -16,6 +32,14 @@ When('I choose brand, storage capacity and condition') do
   @phone_page.choose_condition_button
 end
 
-Then('I should save this search results') do
+When('I click Save this search') do
   @phone_page.click_save_result_button
 end
+
+Then('I expect to see the notification message') do
+  expect(page).to have_text("We'll send you an email when there's something new.")
+end
+
+# Then('I expect to see page with filtered product') do
+#   expect(true).to be true
+# end

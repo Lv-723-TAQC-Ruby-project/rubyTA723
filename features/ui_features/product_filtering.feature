@@ -1,9 +1,10 @@
 Feature: Filter Product
 
-  Example: Filter product by different features
-    When I go to the EBAY home page
-    And I type "phone" in search field
+  Example: Filter product by different features and save it
+    When I go to eBay login page
+    And I write my username and password
+    And I type "phone" word in search field
     And I click on search button
     And I choose brand, storage capacity and condition
-    Then I should save this search results
-
+    And I click Save this search
+    Then I expect to see the notification message
