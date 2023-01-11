@@ -3,7 +3,6 @@
 require_relative '../base_page_with_header'
 
 class HelpPage < BasePageWithHeader
-
   set_url '/help'
 
   element :search_field, :xpath, "//input[@id='sr-input']"
@@ -17,6 +16,4 @@ class HelpPage < BasePageWithHeader
   def click_search_button
     search_button.click
   end
-
-
 end

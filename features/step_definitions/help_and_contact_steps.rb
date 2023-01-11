@@ -1,6 +1,6 @@
 When('I go to EBAY Help and Contact page') do
   @help_page = HelpPage.new
-  @help_page.load()
+  @help_page.load
 end
 
 When('I click on the Help and Contact link') do

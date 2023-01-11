@@ -6,7 +6,7 @@ class HomePage < BasePageWithHeader
   set_url ''
   element :category_community_button, "a[href='https://community.ebay.com'][class='gf-bttl thrd']"
   element :section_of_languages_button_element, "a[id='gf-fbtn']"
-  element :watchlist, :xpath,"//a[@href= 'https://www.ebay.com/mye/myebay/watchlist']"
+  element :watchlist, :xpath, "//a[@href= 'https://www.ebay.com/mye/myebay/watchlist']"
   element :item_watchlist, :xpath, "//img[@src='https://i.ebayimg.com/thumbs/images/g/XDUAAOSwQbVhTrRA/s-l225.jpg']"
   def click_category_community_button
     sleep(8)
@@ -20,11 +20,12 @@ class HomePage < BasePageWithHeader
   def click_language_button(language)
     find(:xpath, "//*[text()='#{language}']").click
   end
+
   def watchlist_click
     watchlist.click
   end
+
   def item_from_watchlist_click
     item_watchlist.click
   end
-
 end

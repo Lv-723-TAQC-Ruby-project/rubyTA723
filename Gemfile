@@ -5,10 +5,9 @@ source 'https://rubygems.org'
 gem 'capybara'
 gem 'cucumber'
 gem 'pry'
+gem 'rest-client'
 gem 'rspec'
 gem 'rubocop'
 gem 'selenium-webdriver'
 gem 'site_prism'
 gem 'webdrivers'
-gem "rest-client"
-

@@ -10,15 +10,13 @@ When("I click 'Advanced' search link") do
   @advanced_search_page = AdvancedSearchPage.new
 end
 
-When("I click {string} link") do |link_name|
+When('I click {string} link') do |link_name|
   if link_name == 'Find Stores'
     @advanced_search_page.click_find_stores_link
+  elsif link_name == 'By seller'
+    @advanced_search_page.click_by_sellers_link
   else
-    if link_name == 'By seller'
-      @advanced_search_page.click_by_sellers_link
-    else
-      @advanced_search_page.click_find_items_link
-    end
+    @advanced_search_page.click_find_items_link
   end
 end
 

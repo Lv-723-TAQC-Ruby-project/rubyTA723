@@ -6,7 +6,6 @@ class EbayApi
 
 
   def search_for(subject)
-    RestClient.get("#{URL}item_summary/search?q=#{subject}&category_ids=9355", :Authorization => "Bearer #{TOKEN}")
+    RestClient.get("#{URL}item_summary/search?q=#{subject}&category_ids=9355", Authorization: "Bearer #{TOKEN}")
   end
-
 end

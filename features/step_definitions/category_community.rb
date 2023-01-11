@@ -22,7 +22,7 @@ When('I click button start a conversation') do
 end
 
 When('I type {string} in subject field') do |word|
-  @create_new_message_in_community =CreateNewMessageInCommunity.new
+  @create_new_message_in_community = CreateNewMessageInCommunity.new
   @create_new_message_in_community.type_subject_word_field(word)
 end
 
@@ -45,4 +45,3 @@ end
 Then('I should see {string} in opened field') do |word|
   expect(page).to have_content(word)
 end
-

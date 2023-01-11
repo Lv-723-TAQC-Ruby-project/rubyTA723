@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CreateNewMessageInCommunity< BasePageWithHeader
+class CreateNewMessageInCommunity < BasePageWithHeader
   element :subject_word_field, "input[name='subject']"
   element :choose_board_button, "select[name='board']"
   element :comment_field, "body[id='tinymce']"
@@ -15,7 +15,7 @@ class CreateNewMessageInCommunity< BasePageWithHeader
   end
 
   def select_board_button(board)
-      find(:xpath,"//*[text()='#{board}']").click
+    find(:xpath, "//*[text()='#{board}']").click
   end
 
   def type_comment_field(word)
@@ -25,16 +25,4 @@ class CreateNewMessageInCommunity< BasePageWithHeader
   def click_create_post_button
     create_post_button.click
   end
-
-
-
-
-
-
-
-
-
-
-
-
 end
