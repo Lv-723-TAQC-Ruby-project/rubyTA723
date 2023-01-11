@@ -11,7 +11,5 @@ gem 'rubocop'
 gem 'selenium-webdriver'
 gem 'site_prism'
 gem 'webdrivers'
-
-
-# gem "rest-client"
+gem "rest-client"
 
