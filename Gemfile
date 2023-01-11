@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 
 gem 'capybara'
 gem 'cucumber'
-gem 'poltergeist'
 gem 'pry'
 gem 'rspec'
 gem 'rubocop'
