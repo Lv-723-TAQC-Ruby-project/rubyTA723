@@ -1,5 +1,6 @@
+# frozen_string_literal: true
 
-class PhonePage<BasePageWithHeader
+class PhonePage < BasePageWithHeader
   element :brand_category, :xpath, "//span[@class = 'cbx x-refine__multi-select-cbx'][text()='Apple']"
   element :storage_capacity, :xpath, "//span[@class='cbx x-refine__multi-select-cbx'][text()='128 GB']"
   element :condition, :xpath, "//span[@class='cbx x-refine__multi-select-cbx'][text()='New']"
@@ -16,7 +17,8 @@ class PhonePage<BasePageWithHeader
   def choose_condition_button
     storage_capacity.click
   end
-  def   click_save_result_button
+
+  def click_save_result_button
     save_result.click
   end
 end

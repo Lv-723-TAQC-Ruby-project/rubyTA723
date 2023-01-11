@@ -12,5 +12,5 @@ Feature: Change language interface of site
       |language  |expected title                                                          |
       |"Germany" |"Elektronik, Autos, Mode, Sammlerstücke, Möbel und mehr Online-Shopping"|
       |"France"  |"eBay : high-tech, maison, jardin, auto-moto et bien plus"              |
-      |"Japan"   |"【公式】eBayの越境ECで、国境を越え世界へ。｜イーベイ・ジャパン"                  |
+      |"Japan"   |"【公式】eBayの越境ECで、国境を越え世界へ。｜イーベイ・ジャパン"                 |
 
