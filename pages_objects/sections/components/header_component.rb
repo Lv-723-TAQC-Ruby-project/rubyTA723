@@ -27,4 +27,7 @@ class HeaderComponent < BaseSection
   def click_search_button
     search_button.click
   end
+
 end
+
+
