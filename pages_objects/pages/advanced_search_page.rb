@@ -18,6 +18,8 @@ class AdvancedSearchPage < BasePageWithHeader
 
   element :search_button, :xpath, "//button[contains(text(),'Search')]", match: :first
   element :search_button_bottom, :xpath, "//button[@id='searchBtnLowerLnk']"
+  element :title_first_product_button, :xpath, "//span[@role='heading'][text()='Playstation 4 Slim PS4 Slim 500gb Console Complete (FAST FREE POSTAGE)']"
+  element :add_to_cart_button, :xpath, "/html/body/div[5]/div[3]/div/div/div[2]/div[3]/div[2]/form/div[2]/div/div[1]/div[2]/ul/li[2]/div/a"
 
   def click_search_tips_link
     search_tips_link.click
@@ -66,4 +68,15 @@ class AdvancedSearchPage < BasePageWithHeader
   def click_search_button_bottom
     search_button_bottom.click
   end
+
+  def click_title_first_product_button
+    title_first_product_button.click
+    sleep(2)
+  end
+
+  def click_add_to_cart_button
+    add_to_cart_button.click
+    sleep(2)
+  end
+
 end
