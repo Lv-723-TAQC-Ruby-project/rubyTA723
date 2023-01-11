@@ -4,7 +4,7 @@ require_relative '../base_page_with_header'
 
 class HelpPage < BasePageWithHeader
 
-  set_url '/help/home'
+  set_url '/help'
 
   element :search_field, :xpath, "//input[@id='sr-input']"
   element :search_button, :xpath, "//button[@id='sr-action']"
