@@ -10,9 +10,5 @@ When('I type {string} in search field') do |search_word|
 end
 
 When('I click search button') do
-  expect(true).to be true
-end
-
-Then('I should see {string} in browser title') do |_word|
-  expect(true).to be true
+  @home_page.click_search_button
 end

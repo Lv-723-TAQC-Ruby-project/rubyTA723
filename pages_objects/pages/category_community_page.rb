@@ -17,5 +17,4 @@ class CategoryCommunityPage < BasePageWithHeader
     sleep(3)
     start_conversation_button.click
   end
-
 end
