@@ -6,7 +6,7 @@ require 'json'
 describe 'Ebay API' do
   context 'when search API', :test do
     before(:all) do
-      @response = EbayApi.new.search_for('lg')
+      @response = SearchEbayApi.new.search_for('lg')
     end
     let(:search_result) { JSON(@response.body) }
     it 'checks response code of search request' do
