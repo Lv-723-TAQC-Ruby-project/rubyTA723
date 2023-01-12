@@ -13,7 +13,7 @@ class RequestApi
   end
 
   def add_item_in_basket(body)
-    RestClient.post("#{BROWSE_URL}/shopping_cart/add_item", body, Authorization: "Bearer #{TOKEN}")
+    RestClient.post("#{BROWSE_URL}/shopping_cart/add_item&X-EBAY-C-MARKETPLACE-ID:EBAY_US", body, Authorization: "Bearer #{TOKEN_APP}")
   end
 
   def get_by_legacy_id(legacy_id)
