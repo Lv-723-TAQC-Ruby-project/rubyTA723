@@ -19,5 +19,16 @@ describe 'test advanced search api' do
       expect(response_body["items"][0]["shippingType"]).to include 'Free'
     end
   end
-end
 
+  context 'get item by group id' do
+    before(:all) do
+      @body = {}
+      @response = RequestApi.new.get_by_item_group("#34586")
+    end
+    let(:response_body) { JSON(@response.body) }
+
+    it 'check response code' do
+      expect(@response.code).to eq 200
+    end
+  end
+end
