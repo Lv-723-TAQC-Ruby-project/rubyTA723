@@ -1,3 +1,7 @@
+require 'rest-client'
+require 'json'
+require_relative '../configs/env'
+
 class RequestApi
   URL = "https://sandbox.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsAdvanced&SERVICE-VERSION=1.0.0"
 

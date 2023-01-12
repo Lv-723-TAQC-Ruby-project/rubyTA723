@@ -2,7 +2,7 @@ require_relative '../helpers/ebay_api'
 require 'json'
 
 describe 'test advanced search api' do
-  context 'when find item with free shipping' do
+  context 'when find item with free shipping', :test do
     before(:all) do
       @body = {}
       @response = RequestApi.new.find_item_with_free_shipping("id", "tolkien")
