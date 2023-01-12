@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../helpers/ebay_api'
+require_relative '../helpers/search_ebay_api'
 require 'json'
 
 describe 'Ebay API' do
