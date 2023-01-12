@@ -72,7 +72,7 @@ class AdvancedSearchPage < BasePageWithHeader
     search_button_bottom.click
   end
 
-  # don't belongs to this class
+  # don't belong to this class
   # def click_title_first_product_button
   #   title_first_product_button.click
   #   sleep(2)
