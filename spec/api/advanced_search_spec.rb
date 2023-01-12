@@ -5,7 +5,7 @@ describe 'test advanced search api' do
   context 'when find item with free shipping', :test do
     before(:all) do
       @body = {}
-      @response = RequestApi.new.find_item_with_free_shipping("id", "tolkien")
+      @response = RequestApi.new.free_shipping
     end
 
     let(:response_body) { JSON(@response.body) }
@@ -15,15 +15,14 @@ describe 'test advanced search api' do
     end
 
     it 'check response body' do
-      puts(response_body)
       expect(response_body["items"][0]["shippingType"]).to include 'Free'
     end
   end
 
-  context 'get item by group id' do
+  context 'get item by legacy id' do
     before(:all) do
       @body = {}
-      @response = RequestApi.new.get_by_item_group("#34586")
+      @response = RequestApi.new.get_by_legacy_id(110552832245)
     end
     let(:response_body) { JSON(@response.body) }
 
