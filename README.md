@@ -10,3 +10,8 @@ Create file features/support/config/config.yml add lines
         password: <password>
         first_name: <first_name>
 
+
+Create file spec/configs/config.yml add lines
+
+    ebay:      
+        token: <token>
