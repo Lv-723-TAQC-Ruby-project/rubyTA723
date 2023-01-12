@@ -14,6 +14,7 @@ class CategoryCommunityPage < BasePageWithHeader
   end
 
   def click_start_conversation_button
+    sleep(3)
     start_conversation_button.click
   end
 

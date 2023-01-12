@@ -16,8 +16,6 @@ end
 Then('I should see {string} in result search') do |result_search|
   expect(page).to have_content(result_search)
 end
-<<<<<<< HEAD
-
 
 
 
@@ -50,6 +48,3 @@ Then('I should see {string} in opened field') do |word|
   expect(page).to have_content(word)
 end
 
-
-=======
->>>>>>> 7fe68e358b7df97faccbc365d499f08eeac4d79e
