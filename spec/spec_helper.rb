@@ -14,6 +14,8 @@
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require_relative 'configs/capybara_settings'
+require 'rest-client'
+require 'json'
 
 Capybara.current_driver = :selenium_chrome
 RSpec.configure do |config|
