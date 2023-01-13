@@ -19,12 +19,6 @@ When('I click {string} link') do |link_name|
     @advanced_search_page.click_by_sellers_link
   else
     @advanced_search_page.click_find_items_link
-    case link_name
-    when 'By seller'
-      @advanced_search_page.click_by_sellers_link
-    when 'Find items'
-      @advanced_search_page.click_find_items_link
-    end
   end
 end
 
@@ -67,11 +61,6 @@ end
 And('I click hint search tips') do
   @advanced_search_page.click_search_tips_link
   @hint = @advanced_search_page.switch_to_window { title == 'General search tips' }
-end
-
-And('I click hint using advanced search options') do
-  @advanced_search_page.click_advanced_search_options
-  @hint_advanced = @advanced_search_page.switch_to_window { title == 'Advanced search | eBay' }
 end
 
 Then('I should see hint page with {string} content') do |expected_content|
