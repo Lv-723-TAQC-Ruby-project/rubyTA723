@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 Given('I am on the eBay login page') do
   @login_page = LoginPage.new
   @login_page.load
