@@ -3,7 +3,6 @@
 describe 'test Browse Api, item' do
   context 'get item by legacy id' do
     before(:all) do
-      @body = {}
       @response = RequestApi.new.get_by_legacy_id(110552832245)
     end
     let(:response_body) { JSON(@response.body) }
