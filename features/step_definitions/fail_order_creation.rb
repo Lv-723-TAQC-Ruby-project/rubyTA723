@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 Given('I visit the eBay login page') do
   @login_page = LoginPage.new
   @login_page.load
 end
 When('I print my username and password') do
   @login_page.login(LOGIN, PASSWORD)
-
 end
 
 When('I open page with item') do

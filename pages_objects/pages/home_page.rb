@@ -9,6 +9,7 @@ class HomePage < BasePageWithHeader
   element :watchlist, :xpath, "//a[@href= 'https://www.ebay.com/mye/myebay/watchlist']"
   element :item_watchlist, :xpath, "//img[@src='https://i.ebayimg.com/thumbs/images/g/XDUAAOSwQbVhTrRA/s-l225.jpg']"
   element :search_button, :xpath, "//*[@id='gh-btn']"
+  element :investors_link, :xpath, "//a[normalize-space()='Investors']"
   def click_category_community_button
     sleep(3)
     category_community_button.click
@@ -29,8 +30,12 @@ class HomePage < BasePageWithHeader
   def item_from_watchlist_click
     item_watchlist.click
   end
-  
+
   def click_search_button
     search_button.click
+  end
+
+  def click_investors_link
+    investors_link.click
   end
 end

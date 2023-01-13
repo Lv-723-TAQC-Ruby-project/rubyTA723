@@ -2,7 +2,7 @@
 
 require_relative '../base_page_with_header'
 class ItemToBuyPage < BasePageWithHeader
-  set_url "itm/383791923777"
+  set_url 'itm/383791923777'
   element :color_type, :xpath, "//select[@id='x-msku__select-box-1000']"
   element :color_choose, :xpath, "//option[@id='x-msku__option-box-0']"
   element :capacity, :xpath, "//select[@id='x-msku__select-box-1001']"

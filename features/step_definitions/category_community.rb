@@ -68,4 +68,3 @@ end
 Then('I should see {string} on the page of Latest Announcements') do |word|
   expect(page).to have_content(word)
 end
-
