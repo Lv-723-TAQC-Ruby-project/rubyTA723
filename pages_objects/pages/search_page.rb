@@ -5,8 +5,8 @@ class SearchPage < BasePageWithHeader
   element :sort_dropdown, :xpath, "//span[contains(text(),'Best Match')]"
   element :sort_ending_soonest, :xpath, "//span[normalize-space()='Time: ending soonest']"
   elements :time_ending, :xpath, "//span[@class='s-item__time-end']"
-  element :title_first_product_button, :xpath, "//span[@role='heading'][text()='Playstation 4 Slim PS4 Slim 500gb Console Complete (FAST FREE POSTAGE)']"
-  element :add_to_cart_button, :xpath, "//ul[@class='x-buybox-cta']/li[2]"
+  element :product_rating_button, :xpath, "//span[contains(text(), 'product ratings')]", match: :first
+  element :close_message_button,"button[class='srp-save-search__tooltip-close']"
 
   def click_sort_dropdown
     sort_dropdown.click
@@ -25,20 +25,13 @@ class SearchPage < BasePageWithHeader
     false
   end
 
-  def click_title_first_product_button
-    title_first_product_button.click
+  def click_product_rating_button
+    product_rating_button.click
     sleep(2)
   end
 
-  def click_add_to_cart_button
-    add_to_cart_button.click
-    sleep(2)
-  end
-
-  def click_close_message
+  def click_close_message_button
     return unless page.has_text?("Not finding what you're looking for?")
-    find("button[class='srp-save-search__tooltip-close']").click
+    close_message_button.click
   end
-
-
 end
