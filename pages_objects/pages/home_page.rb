@@ -30,7 +30,7 @@ class HomePage < BasePageWithHeader
   def item_from_watchlist_click
     item_watchlist.click
   end
-  
+
   def click_search_button
     search_button.click
   end

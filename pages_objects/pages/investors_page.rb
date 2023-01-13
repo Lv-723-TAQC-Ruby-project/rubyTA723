@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'basic_yahoo_finance'
 require_relative '../base_page_with_header'
 
@@ -11,10 +13,10 @@ class InvestorsPage < BasePageWithHeader
   end
 
   private
+
   def get_actual_stock_price
     query = BasicYahooFinance::Query.new
     data = query.quotes('EBAY')
     data['EBAY']['regularMarketPrice']
   end
-
 end

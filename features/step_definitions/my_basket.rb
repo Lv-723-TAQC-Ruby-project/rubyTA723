@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 And('I select first product') do
   @search_page = SearchPage.new
   @search_page.click_close_message

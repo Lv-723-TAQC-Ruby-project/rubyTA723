@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../helpers/ebay_api'
 require 'json'
 
@@ -15,14 +17,14 @@ describe 'test advanced search api' do
     end
 
     it 'check response body' do
-      expect(response_body["items"][0]["shippingType"]).to include 'Free'
+      expect(response_body['items'][0]['shippingType']).to include 'Free'
     end
   end
 
   context 'get item by legacy id' do
     before(:all) do
       @body = {}
-      @response = RequestApi.new.get_by_legacy_id(110552832245)
+      @response = RequestApi.new.get_by_legacy_id(110_552_832_245)
     end
     let(:response_body) { JSON(@response.body) }
 
