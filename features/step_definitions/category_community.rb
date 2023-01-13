@@ -2,6 +2,7 @@
 
 When('I click category community') do
   @home_page.click_category_community_button
+  sleep(3)
 end
 
 When('I type {string} in community search field') do |key_word|
@@ -47,3 +48,19 @@ Then('I should see {string} in opened field') do |word|
   expect(page).to have_content(word)
 end
 
+When('I click  popup window of seller news') do
+  @category_community_page.click_seller_news_popup_button
+end
+
+When('I select Announcements') do
+  @category_community_page.select_announcements
+end
+
+When('I click subscribe on Latest Announcements') do
+  @announcements_community = AnnouncementsCommunity.new
+  @announcements_community.click_subscribe_button
+end
+
+Then('I should see {string} on the page of Latest Announcements') do |word|
+  expect(page).to have_content(word)
+end
