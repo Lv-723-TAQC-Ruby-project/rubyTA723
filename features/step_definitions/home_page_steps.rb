@@ -12,3 +12,8 @@ end
 When('I click search button') do
   @home_page.click_search_button
 end
+
+
+When('I click Investors link') do
+  @home_page.click_investors_link
+end

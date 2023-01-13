@@ -13,6 +13,7 @@ require_relative '../../pages_objects/pages/help_page'
 require_relative '../../pages_objects/pages/search_page'
 require_relative '../../pages_objects/pages/create_new_message_in_community'
 require_relative '../../pages_objects/pages/announcements_community'
+require_relative '../../pages_objects/pages/investors_page'
 
 require "#{File.dirname(__FILE__)}/config/configuration"
 BASE_URL = Configuration['base_url']
