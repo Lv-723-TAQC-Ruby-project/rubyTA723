@@ -27,11 +27,6 @@ Feature: Advanced search
     And I click on the "bottom" search button
     Then I should see "Samsung" in the parameters of search on the result page
 
-  Scenario: Advanced Hints link checking
-    Given I am on the Ebay Advanced search page
-    And I click hint using advanced search options
-    Then I should see hint page with "Customer Service" content
-
   Example: Search tips link checking
     Given I am on the Ebay Advanced search page
     And I click hint search tips

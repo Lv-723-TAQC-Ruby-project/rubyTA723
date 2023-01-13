@@ -12,6 +12,7 @@ class CreateNewMessageInCommunity < BasePageWithHeader
 
   def click_choose_board_button
     choose_board_button.click
+    sleep(3)
   end
 
   def select_board_button(board)
@@ -24,5 +25,6 @@ class CreateNewMessageInCommunity < BasePageWithHeader
 
   def click_create_post_button
     create_post_button.click
+    sleep(3)
   end
 end

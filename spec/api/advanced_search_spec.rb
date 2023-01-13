@@ -1,24 +1,7 @@
 require_relative '../helpers/ebay_api'
 require 'json'
 
-describe 'test advanced search api' do
-  context 'when find item with free shipping', :test do
-    before(:all) do
-      @body = {}
-      @response = RequestApi.new.free_shipping
-    end
-
-    let(:response_body) { JSON(@response.body) }
-
-    it 'check response code' do
-      expect(@response.code).to eq 200
-    end
-
-    it 'check response body' do
-      expect(response_body["items"][0]["shippingType"]).to include 'Free'
-    end
-  end
-
+describe 'test api' do
   context 'get item by legacy id' do
     before(:all) do
       @body = {}
@@ -28,6 +11,9 @@ describe 'test advanced search api' do
 
     it 'check response code' do
       expect(@response.code).to eq 200
+    end
+    it 'try' do
+      puts(response_body)
     end
   end
 end

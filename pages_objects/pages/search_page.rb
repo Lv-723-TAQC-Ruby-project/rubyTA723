@@ -18,9 +18,7 @@ class SearchPage < BasePageWithHeader
 
   def check_if_sort_is_correct
     time_ending.each_cons(2) do |first, second|
-      if Time.parse(first.text) < Time.parse(second.text)
-        return true
-      end
+      return true if Time.parse(first.text) < Time.parse(second.text)
     end
     false
   end

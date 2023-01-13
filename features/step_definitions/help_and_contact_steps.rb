@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 When('I go to EBAY Help and Contact page') do
   @help_page = HelpPage.new
   @help_page.load
