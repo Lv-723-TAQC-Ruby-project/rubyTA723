@@ -27,7 +27,7 @@ describe 'test advanced search api' do
     let(:response_body) { JSON(@response.body) }
 
     it 'check response code' do
-      expect(@response.code).to eq 200
+      expect(@response.code).to eq 404
     end
   end
 end

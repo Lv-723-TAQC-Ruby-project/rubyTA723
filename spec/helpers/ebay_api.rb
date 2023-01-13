@@ -9,9 +9,8 @@ class RequestApi
   BROWSE_URL= "https://api.sandbox.ebay.com/buy/browse/v1"
 
   def free_shipping
-    RestClient.get("#{SERVICE_URL}?SECURITY-APPNAME=#{APP_NAME}&OPERATION-NAME:findItemsAdvanced&itemFilter.name=FreeShippingOnly&itemFilter.value=true")
+    RestClient.get("#{SERVICE_URL}", operation_name: 'findItemsAdvanced', content_type: :json, accept: :json, security_appname: "#{APP_NAME}")
   end
-
   def add_item_in_basket(body)
     RestClient.post("#{BROWSE_URL}/shopping_cart/add_item&X-EBAY-C-MARKETPLACE-ID:EBAY_US", body, Authorization: "Bearer #{TOKEN_APP}")
   end
