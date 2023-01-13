@@ -5,6 +5,7 @@ Given('I am on the eBay login page') do
 end
 
 When('I enter my username and password') do
+  @login_page.check_capcha
   @login_page.login(LOGIN, PASSWORD)
 end
 

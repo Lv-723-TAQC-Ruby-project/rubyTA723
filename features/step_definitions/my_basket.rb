@@ -5,6 +5,7 @@ And('I select first product') do
 end
 
 And('I add the product to cart') do
+  require 'pry'; binding.pry
   @search_page.click_add_to_cart_button
 end
 

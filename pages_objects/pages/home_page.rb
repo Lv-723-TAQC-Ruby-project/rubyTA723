@@ -10,7 +10,7 @@ class HomePage < BasePageWithHeader
   element :item_watchlist, :xpath, "//img[@src='https://i.ebayimg.com/thumbs/images/g/XDUAAOSwQbVhTrRA/s-l225.jpg']"
   element :search_button, :xpath, "//*[@id='gh-btn']"
   def click_category_community_button
-    sleep(8)
+    sleep(3)
     category_community_button.click
   end
 

@@ -1,11 +1,20 @@
 Feature: Check functionality of community
 
-#  Example: Search by kye word
-#    When I visit EBAY home page
-#    And I click category community
-#    And I type "car" in community search field
-#    And I click community search button
-#    Then I should see "car" in result search
+  Example: Search by kye word
+    When I visit EBAY home page
+    And I click category community
+    And I type "car" in community search field
+    And I click community search button
+    Then I should see "car" in result search
+
+  Scenario: Subscribing on the page
+    Given I am on the eBay login page
+    When I enter my username and password
+    And I visit EBAY home page
+    And I click category community
+    And I select Announcements on community page
+    And I click subscribe on Latest Announcements
+    Then I should see "unsubscribe" on the page of Latest Announcements
 
 
   Scenario Outline: Writing post
@@ -26,14 +35,10 @@ Feature: Check functionality of community
       |"Electronics"|"iphone 14"|
 
 
-#  Scenario: Subscribing on the page
-#    Given I am on the eBay login page
-#    When I enter my username and password
-#    And I visit EBAY home page
-#    And I click category community
-#    And I click  popup window of seller news
-#    And I select Announcements
-#    And I click subscribe on Latest Announcements
-#    Then I should see "unsubscribe" on the page of Latest Announcements
+
+
+
+
+
 
 

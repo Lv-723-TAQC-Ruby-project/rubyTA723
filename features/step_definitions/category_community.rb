@@ -2,7 +2,6 @@
 
 When('I click category community') do
   @home_page.click_category_community_button
-  sleep(3)
 end
 
 When('I type {string} in community search field') do |key_word|
@@ -55,6 +54,11 @@ end
 When('I select Announcements') do
   @category_community_page.select_announcements
 end
+
+When('I select Announcements on community page') do
+  @category_community_page.click_announcements_button
+end
+
 
 When('I click subscribe on Latest Announcements') do
   @announcements_community = AnnouncementsCommunity.new
