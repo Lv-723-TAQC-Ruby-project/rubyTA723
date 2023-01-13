@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Given('I am on the Ebay main page') do
   @home_page = HomePage.new
   @home_page.load
