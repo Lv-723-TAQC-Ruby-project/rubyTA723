@@ -11,6 +11,7 @@ require_relative '../../pages_objects/pages/search_tips_hint_page'
 require_relative '../../pages_objects/pages/advanced_search_options_page'
 require_relative '../../pages_objects/pages/help_page'
 require_relative '../../pages_objects/pages/search_page'
+require_relative '../../pages_objects/pages/my_ebay_page'
 
 require "#{File.dirname(__FILE__)}/config/configuration"
 BASE_URL = Configuration['base_url']

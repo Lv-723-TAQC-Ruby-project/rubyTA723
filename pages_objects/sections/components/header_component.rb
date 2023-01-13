@@ -9,6 +9,7 @@ class HeaderComponent < BaseSection
   element :subcategory, :xpath, "//a[@href='https://www.ebay.com/b/Golf-Equipment/1513/bn_1849088']"
   element :search_button, :xpath, "//td[@class = 'gh-td gh-sch-btn']"
   element :help_contact_link, :xpath, "//li[@id='gh-p-3']"
+  element :my_ebay_button, :xpath, "//a[@href='https://www.ebay.com/mys/home?source=GBH']"
 
 
   def click_help_contact_link
@@ -33,5 +34,9 @@ class HeaderComponent < BaseSection
 
   def click_search_button
     search_button.click
+  end
+
+  def click_my_ebay_button
+    my_ebay_button.click
   end
 end
