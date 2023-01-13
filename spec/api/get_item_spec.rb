@@ -11,6 +11,8 @@ describe "ebay browse api" do
     it 'check response code' do
       expect(@response.code).to eq 200
     end
+
+
   end
 
 end
