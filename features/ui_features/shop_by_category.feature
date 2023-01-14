@@ -1,7 +1,7 @@
 Feature: Shop by category
 
   Example: Shop by category
-    Given I visit EBAY home page
+    Given I am on the Ebay main page
     When  I click shop by category
     And I click subcategory
     And I click brand sorting

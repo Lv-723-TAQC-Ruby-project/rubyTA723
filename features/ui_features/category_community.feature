@@ -1,7 +1,7 @@
 Feature: Check functionality of community
 
   Example: Search by key word
-    Given I visit EBAY home page
+    Given I am on the Ebay main page
     And I click category community
     And I type "car" in community search field
     And I click community search button
@@ -10,7 +10,7 @@ Feature: Check functionality of community
   Scenario: Subscribe on the page
     Given I am on the eBay login page
     When I enter my username and password
-    And I visit EBAY home page
+    And I am on the Ebay main page
     And I click category community
     And I select Announcements on community page
     And I click subscribe on Latest Announcements
@@ -20,7 +20,7 @@ Feature: Check functionality of community
   Scenario Outline: Write post
     Given I am on the eBay login page
     When I enter my username and password
-    And I visit EBAY home page
+    And I am on the Ebay main page
     And I click category community
     And I click button start a conversation
     And I type <word> in subject field

@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-Given('I am on the Ebay main page') do
-  @home_page = HomePage.new
-  @home_page.load
-end
-
 Given('I am on the Ebay Advanced search page') do
   @home_page = HomePage.new
   @home_page.load

@@ -1,7 +1,7 @@
 Feature: Help and Contact functionality
 
   Example: Navigate test
-    Given I visit EBAY home page
+    Given I am on the Ebay main page
     When I click on the Help and Contact link
     Then I expect to see "eBay Customer Service" in browser title
 

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-When('I visit EBAY home page') do
+Given('I am on the Ebay main page') do
   @home_page = HomePage.new
   @home_page.load
 end
