@@ -16,7 +16,7 @@
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require_relative 'configs/capybara_settings'
-require_relative 'helpers/ebay_api'
+require_relative 'helpers/advanced_search_api'
 require_relative 'configs/env'
 require 'rest-client'
 require 'json'
