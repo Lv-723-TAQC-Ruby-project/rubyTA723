@@ -4,7 +4,7 @@ describe 'test shopping basket' do
   context 'add item in the basket which does not support Pay Pal ' do
     before(:all) do
       @body = { 'itemId': 'v1|110552873120|0', 'quantity': '2' }
-      @response = RequestApi.new.add_item_in_basket(@body)
+      @response = ShoppingCartApi.new.add_item_in_basket(@body)
     end
 
     let(:response_body) { JSON(@response.body) }
