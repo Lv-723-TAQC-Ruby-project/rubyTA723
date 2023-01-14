@@ -1,9 +1,7 @@
-
 Feature: Change language interface of site
 
-
   Scenario Outline: Successful change language
-    Given I open EBAY home page
+    Given I am on the Ebay main page
     When I open section of languages
     And I select <language>
     Then I expect to see <expected title> in browser title

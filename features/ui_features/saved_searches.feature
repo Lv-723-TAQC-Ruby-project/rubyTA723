@@ -1,7 +1,7 @@
 Feature: Saved searches
 
   Example: Add filtered result to saved searches chapter
-    Given I go to eBay login page
+    Given I visit the eBay login page
     When I write my username and password
     And I type "phone" word in search field
     And I click on search button
@@ -11,6 +11,7 @@ Feature: Saved searches
     And I click Saved searches button
     Then I expect to see a saved searches title
 
+  # TODO: fix and uncomment test or delete it
 #  Example: Unsave all searches
 #    Given I go to eBay login page
 #    When I write my username and password

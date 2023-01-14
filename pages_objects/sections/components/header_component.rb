@@ -11,7 +11,6 @@ class HeaderComponent < BaseSection
   element :help_contact_link, :xpath, "//li[@id='gh-p-3']"
   element :my_ebay_button, :xpath, "//a[@href='https://www.ebay.com/mys/home?source=GBH']"
 
-
   def click_help_contact_link
     help_contact_link.click
   end

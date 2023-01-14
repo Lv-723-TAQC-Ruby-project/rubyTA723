@@ -15,9 +15,11 @@
 # it.
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-require_relative 'configs/capybara_settings'
 require_relative 'helpers/advanced_search_api'
 require_relative 'helpers/shopping_cart_api'
+require_relative 'helpers/item_group_ids_api'
+require_relative 'helpers/search_ebay_api'
+require_relative 'helpers/item_api'
 require_relative 'configs/env'
 require 'rest-client'
 require 'json'
