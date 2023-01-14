@@ -21,6 +21,7 @@ require_relative 'helpers/item_group_ids_api'
 require_relative 'helpers/search_ebay_api'
 require_relative 'helpers/item_api'
 require_relative 'configs/env'
+require 'capybara'
 require 'rest-client'
 require 'json'
 
