@@ -17,5 +17,10 @@ describe 'API shopping basket' do
     it 'checks error message' do
       expect(response_body['message']).to eq(expected_error_message)
     end
+
+    it 'checks response code while getting shopping cart' do
+      @response = ShoppingCartApi.new.get_shopping_cart
+      expect(@response.code).to eq 403
+    end
   end
 end

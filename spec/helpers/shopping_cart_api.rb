@@ -7,4 +7,9 @@ class ShoppingCartApi
     RestClient.post("#{URL}/shopping_cart/add_item", body,
                     { Authorization: "Bearer #{TOKEN_APP}", marketplace_id: "EBAY_US" })
   end
+
+  def get_shopping_cart
+    RestClient.get("#{URL}/shopping_cart/",
+                   { Authorization: "Bearer #{TOKEN}" })
+  end
 end
