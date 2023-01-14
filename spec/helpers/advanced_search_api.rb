@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-require 'rest-client'
-require 'json'
-require_relative '../configs/env'
-
 class RequestApi
   URL = 'https://api.sandbox.ebay.com/buy/browse/v1'
 
