@@ -1,5 +1,8 @@
 Feature: Advanced search
 
+  As a user, I want to be able to search items by their number or seller,
+  store by its name and see search tips in order to easily search items on eBay.
+
   Scenario Outline: Find by item number
     Given I am on the Ebay Advanced search page
     And I enter item number <number> in the 'Enter keywords or item number' field
