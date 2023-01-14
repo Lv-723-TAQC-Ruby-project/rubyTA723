@@ -17,7 +17,6 @@ When('I choose brand') do
   @golf_equipment_page.chosen_brand
 end
 
-Then('I expect to see filtered page') do
-  # TODO: Add test here
-  expect(true).to be true
+Then('I expect to see page with chosen filters {string}') do |item_names|
+  expect(page).to have_text(item_names)
 end

@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+require_relative '../helpers/advanced_search_api'
+require_relative '../helpers/search_ebay_api'
 
 describe 'Item: Browse Api' do
   context 'when get item by legacy id' do
@@ -33,15 +35,21 @@ describe 'Item: Browse Api' do
     it 'checks response body' do
       expect(search_result['itemSummaries'][0]['title']).to eql(expected_title)
     end
+  end
 
-    before do
-      @response = SearchEbayApi.new.search_refinements('macbook')
+  context 'when search for item refinements', :test do
+    before(:all) do
+        @response = SearchEbayApi.new.search_refinements('macbook')
     end
+
+    let(:response_body) { JSON(@response.body) }
+
     it 'checks response code of refinements of items' do
       expect(@response.code).to eq 200
     end
+
     it 'checks response body' do
-      expect(search_result["refinement"]).to include("categoryDistributions" => [{"categoryId" => "171485", "categoryName" => "Tablets & eBook Readers","refinementHref" => "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search?q=macbook&limit=3&fieldgroups=ASPECT_REFINEMENTS%2CCATEGORY_REFINEMENTS%2CCONDITION_REFINEMENTS%2CBUYING_OPTION_REFINEMENTS&category_ids=171485"}])
+      expect(response_body["refinement"]).to include("categoryDistributions" => [{"categoryId" => "171485", "categoryName" => "Tablets & eBook Readers","refinementHref" => "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search?q=macbook&limit=3&fieldgroups=ASPECT_REFINEMENTS%2CCATEGORY_REFINEMENTS%2CCONDITION_REFINEMENTS%2CBUYING_OPTION_REFINEMENTS&category_ids=171485"}])
     end
   end
 end
