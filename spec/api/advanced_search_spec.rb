@@ -8,11 +8,11 @@ describe 'Item: Browse Api' do
 
     let(:response_body) { JSON(@response.body) }
 
-    it 'check response code' do
+    it 'checks response code' do
       expect(@response.code).to eq 200
     end
 
-    it 'check response body' do
+    it 'checks response body' do
       expect(response_body["categoryPath"]).to eq("Cameras & Photo|Camera Drones")
       expect(response_body["title"]).to eq("Protocol Kaptur GPS II Wi-Fi Drone with HD Camera")
     end
