@@ -11,7 +11,7 @@ class HomePage < BasePageWithHeader
   element :search_button, :xpath, "//*[@id='gh-btn']"
   element :investors_link, :xpath, "//a[normalize-space()='Investors']"
   def click_category_community_button
-    sleep(3)
+    sleep(1)
     category_community_button.click
   end
 

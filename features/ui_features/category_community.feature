@@ -1,4 +1,4 @@
-Feature: Check functionality of community
+Feature: Check the basic functionality for the active user
 
   Example: Search by key word
     Given I am on the Ebay main page
@@ -14,8 +14,7 @@ Feature: Check functionality of community
     And I click category community
     And I select Announcements on community page
     And I click subscribe on Latest Announcements
-    Then I should see "unsubscribe"
-
+    Then I should see "Unsubscribe"
 
   Scenario Outline: Write post
     Given I am on the eBay login page

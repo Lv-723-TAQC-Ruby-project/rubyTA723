@@ -14,6 +14,7 @@ When('I click community search button') do
 end
 
 When('I click button start a conversation') do
+  @category_community_page = CategoryCommunityPage.new
   @category_community_page.click_start_conversation_button
 end
 
@@ -47,6 +48,7 @@ When('I select Announcements') do
 end
 
 When('I select Announcements on community page') do
+  @category_community_page = CategoryCommunityPage.new
   @category_community_page.click_announcements_button
 end
 
