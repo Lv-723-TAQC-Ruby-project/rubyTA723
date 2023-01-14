@@ -5,7 +5,6 @@ require_relative '../helpers/item_group_ids_api'
 describe "Ebay browse api" do
   context 'when find certain group of items by group id', :test do
     before(:all) do
-
       @response = ItemApi.new.get_group_of_items(110552751758)
     end
 
@@ -31,4 +30,5 @@ describe "Ebay browse api" do
       expect(response.code).to eq 200
     end
   end
+
 end
