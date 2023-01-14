@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 And('I click on rating button of first product') do
   @search_page = SearchPage.new

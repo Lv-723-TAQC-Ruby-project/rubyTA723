@@ -32,7 +32,7 @@ class CategoryCommunityPage < BasePageWithHeader
   end
 
   def click_announcements_button
-    sleep(5)
+    sleep(2)
     announcements_button.click
   end
 end

@@ -1,8 +1,8 @@
 Feature: Checking of rating of products
 
   Scenario Outline: Successful checking of rating
-    When I am on the Ebay main page
-    And I type <product> in search field
+    Given I am on the Ebay main page
+    When I type <product> in search field
     And I click on search button
     And I click on rating button of first product
     Then I should see rating of <product> on the page
