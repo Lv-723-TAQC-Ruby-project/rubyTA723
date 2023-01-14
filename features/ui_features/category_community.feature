@@ -1,23 +1,23 @@
 Feature: Check functionality of community
 
-  Example: Search by kye word
-    When I visit EBAY home page
+  Example: Search by key word
+    Given I visit EBAY home page
     And I click category community
     And I type "car" in community search field
     And I click community search button
-    Then I should see "car" in result search
+    Then I should see "car"
 
-  Scenario: Subscribing on the page
+  Scenario: Subscribe on the page
     Given I am on the eBay login page
     When I enter my username and password
     And I visit EBAY home page
     And I click category community
     And I select Announcements on community page
     And I click subscribe on Latest Announcements
-    Then I should see "unsubscribe" on the page of Latest Announcements
+    Then I should see "unsubscribe"
 
 
-  Scenario Outline: Writing post
+  Scenario Outline: Write post
     Given I am on the eBay login page
     When I enter my username and password
     And I visit EBAY home page
@@ -28,7 +28,7 @@ Feature: Check functionality of community
     And I select <board> in comment
     And I type "nice" in comment field
     And I click create this post
-    Then I should see "reply" in opened field
+    Then I should see "reply"
 
     Examples:
       |board        | word      |

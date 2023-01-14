@@ -9,7 +9,6 @@ class CategoryCommunityPage < BasePageWithHeader
   element :start_conversation_button, "a[class='lia-button lia-button-primary']", match: :first
   element :seller_news_popup_button, "//a[text()='Seller News']"
 
-
   def type_key_word_field(key_word)
     key_word_field.set(key_word)
   end
@@ -36,5 +35,4 @@ class CategoryCommunityPage < BasePageWithHeader
     sleep(5)
     announcements_button.click
   end
-
 end

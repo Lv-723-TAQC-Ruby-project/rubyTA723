@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require_relative '../base_page_with_header'
 
+# TODO: Fix class methods
 class MyEbay < BasePageWithHeader
   element :saved_searches, :xpath, "//a[@href = 'https://www.ebay.com/myb/SavedSearches']"
   # element :three_dots_button,  "id = 'nid-fkw-2'"

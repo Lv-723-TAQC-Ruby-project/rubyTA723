@@ -1,15 +1,9 @@
 # frozen_string_literal: true
 
-When('I open EBAY home page') do
-  @home_page = HomePage.new
-  @home_page.load
-end
-
 When("I click 'Advanced' search link") do
   @home_page.header.click_advanced_search_link
   @advanced_search_page = AdvancedSearchPage.new
 end
-
 
 When('I click {string} link') do |link_name|
   case link_name
@@ -54,15 +48,7 @@ When('I click on the {string} search button') do |placement_of_button|
   end
 end
 
-Then('I should see {string} in the parameters of search on the result page') do |expected_seller|
-  expect(page).to have_content(expected_seller)
-end
-
 And('I click hint search tips') do
   @advanced_search_page.click_search_tips_link
   @hint = @advanced_search_page.switch_to_window { title == 'General search tips' }
-end
-
-Then('I should see hint page with {string} content') do |expected_content|
-  expect(page).to have_content(expected_content)
 end

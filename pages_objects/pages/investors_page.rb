@@ -3,8 +3,6 @@
 require 'basic_yahoo_finance'
 require_relative '../base_page_with_header'
 
-
-
 class InvestorsPage < BasePageWithHeader
   element :stock_price, :xpath, "//span[@class='module-home-stock_price']"
 

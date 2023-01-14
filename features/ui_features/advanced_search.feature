@@ -25,11 +25,11 @@ Feature: Advanced search
     And I enter "Samsung" in the seller name field
     And I click 'Sellers with eBay stores' radiobutton
     And I click on the "bottom" search button
-    Then I should see "Samsung" in the parameters of search on the result page
+    Then I should see "Samsung"
 
   Example: Search tips link checking
     Given I am on the Ebay Advanced search page
     And I click hint search tips
-    Then I should see hint page with "General search tips" content
+    Then I should see "General search tips"
 
 
