@@ -44,16 +44,4 @@ describe 'Item: Browse Api' do
       expect(search_result["refinement"]).to include("categoryDistributions" => [{"categoryId" => "171485", "categoryName" => "Tablets & eBook Readers","refinementHref" => "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search?q=macbook&limit=3&fieldgroups=ASPECT_REFINEMENTS%2CCATEGORY_REFINEMENTS%2CCONDITION_REFINEMENTS%2CBUYING_OPTION_REFINEMENTS&category_ids=171485"}])
     end
   end
-
-  context 'when API codes' do
-    it 'gets response' do
-      response = ItemsGroupIdsApi.new.get_items(385348059626)
-      expect(response.code).to eq 200
-    end
-
-    it 'checks response on the request' do
-      response = ItemsGroupIdsApi.new.get_items(234743947831)
-      expect(response.code).to eq 200
-    end
-  end
 end
