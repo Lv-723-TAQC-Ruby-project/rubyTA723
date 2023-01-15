@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative '../base_page_with_header'
 
 class SearchPage < BasePageWithHeader
@@ -6,7 +7,7 @@ class SearchPage < BasePageWithHeader
   element :sort_ending_soonest, :xpath, "//span[normalize-space()='Time: ending soonest']"
   elements :time_ending, :xpath, "//span[@class='s-item__time-end']"
   element :product_rating_button, :xpath, "//span[contains(text(), 'product ratings')]", match: :first
-  element :close_message_button,"button[class='srp-save-search__tooltip-close']"
+  element :close_message_button, "button[class='srp-save-search__tooltip-close']"
 
   def click_sort_dropdown
     sort_dropdown.click
@@ -30,6 +31,7 @@ class SearchPage < BasePageWithHeader
 
   def click_close_message_button
     return unless page.has_text?("Not finding what you're looking for?")
+
     close_message_button.click
   end
 end

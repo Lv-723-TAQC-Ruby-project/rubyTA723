@@ -12,7 +12,7 @@ When('I fill all fields except last name') do
   @registration_page.enter_password('Example12345')
 end
 
-Then("I expect to see error message {string}") do |error_message_text|
+Then('I expect to see error message {string}') do |error_message_text|
   expect(page).to have_text(error_message_text)
 end
 

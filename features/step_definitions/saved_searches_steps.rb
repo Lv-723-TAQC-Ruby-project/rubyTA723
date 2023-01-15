@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 When('I click on My ebay button') do
   @home_page.header.click_my_ebay_button
   @my_ebay_page = MyEbay.new

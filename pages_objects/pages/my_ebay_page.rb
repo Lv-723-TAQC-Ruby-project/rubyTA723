@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative '../base_page_with_header'
 
 # TODO: Fix class methods
@@ -19,5 +20,4 @@ class MyEbay < BasePageWithHeader
   # def click_unsave_button
   #   unsave_button.click
   # end
-
 end

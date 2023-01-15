@@ -3,7 +3,7 @@
 class CreateNewMessageInCommunity < BasePageWithHeader
   element :subject_word_field, "input[name='subject']"
   element :choose_board_button, "select[name='board']"
-  element :comment_field, :xpath, "//html/body/p"
+  element :comment_field, :xpath, '//html/body/p'
   element :create_post_button, "input[id='submitContext_0']"
 
   def type_subject_word_field(word)
