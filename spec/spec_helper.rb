@@ -15,12 +15,14 @@
 # it.
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-require_relative 'helpers/advanced_search_api'
-require_relative 'helpers/shopping_cart_api'
-require_relative 'helpers/item_group_ids_api'
-require_relative 'helpers/search_ebay_api'
-require_relative 'helpers/item_api'
+require_relative 'helpers/api/advanced_search_api'
+require_relative 'helpers/api/shopping_cart_api'
+require_relative 'helpers/api/item_group_ids_api'
+require_relative 'helpers/api/search_ebay_api'
+require_relative 'helpers/api/item_api'
 require_relative 'configs/env'
+Dir[File.join(__dir__, 'helpers', '*.rb')].each { |file| require file }
+Dir[File.join(__dir__, 'helpers/api', '*.rb')].each { |file| require file }
 require 'capybara'
 require 'rest-client'
 require 'json'

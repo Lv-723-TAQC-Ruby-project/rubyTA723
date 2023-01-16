@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../helpers/search_ebay_api'
+require_relative '../helpers/api/search_ebay_api'
 
 describe 'Ebay API' do
   context 'when search' do

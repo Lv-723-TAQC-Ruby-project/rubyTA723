@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative '../helpers/metadata_items_condition_policies_api'
+require_relative '../helpers/api/metadata_items_condition_policies_api'
 
 describe 'Metadata API' do
   context 'when search for item condition policies' do

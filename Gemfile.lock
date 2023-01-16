@@ -45,6 +45,7 @@ GEM
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     ffaker (2.21.0)
+    ffi (1.15.5)
     ffi (1.15.5-x64-mingw-ucrt)
     ffi (1.15.5-x64-mingw32)
     http-accept (1.7.0)
@@ -59,10 +60,13 @@ GEM
     mini_mime (1.1.2)
     multi_test (1.1.0)
     netrc (0.11.0)
+    nokogiri (1.13.10-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.13.10-x64-mingw-ucrt)
       racc (~> 1.4)
     nokogiri (1.13.10-x64-mingw32)
       racc (~> 1.4)
+    nori (2.6.0)
     parallel (1.22.1)
     parser (3.2.0.0)
       ast (~> 2.4.1)
@@ -140,6 +144,7 @@ GEM
       nokogiri (~> 1.8)
 
 PLATFORMS
+  arm64-darwin-21
   x64-mingw-ucrt
   x64-mingw32
 
@@ -148,6 +153,7 @@ DEPENDENCIES
   capybara
   cucumber
   ffaker
+  nori
   pry
   rest-client
   rspec

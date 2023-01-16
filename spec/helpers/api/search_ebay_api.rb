@@ -2,7 +2,7 @@
 
 require 'rest-client'
 require 'json'
-require_relative '../configs/env'
+require_relative '../../configs/env'
 
 class SearchEbayApi
   URL = 'https://api.sandbox.ebay.com/buy/browse/v1/'
