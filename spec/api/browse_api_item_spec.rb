@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../helpers/advanced_search_api'
-require_relative '../helpers/search_ebay_api'
-
 describe 'Item: Browse Api' do
   context 'when get item by legacy id' do
     before(:all) do

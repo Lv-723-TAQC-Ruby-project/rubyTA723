@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../helpers/item_api'
-require_relative '../helpers/item_group_ids_api'
-
 describe 'Ebay browse api' do
   context 'when find certain group of items by group id', :test do
     before(:all) do

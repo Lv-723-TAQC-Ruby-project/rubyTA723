@@ -2,3 +2,4 @@
 **Gemfile.lock
 **/features/support/config/config.yml
 **/spec/configs/config.yml
+**/.rspec

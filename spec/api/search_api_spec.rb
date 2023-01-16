@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require_relative '../helpers/search_ebay_api'
-
 describe 'Ebay API' do
   context 'when search' do
     before(:all) do

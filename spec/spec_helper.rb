@@ -15,6 +15,8 @@
 # it.
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require_relative 'helpers/metadata_items_condition_policies_api'
+require_relative 'helpers/auth'
 require_relative 'helpers/advanced_search_api'
 require_relative 'helpers/shopping_cart_api'
 require_relative 'helpers/item_group_ids_api'
