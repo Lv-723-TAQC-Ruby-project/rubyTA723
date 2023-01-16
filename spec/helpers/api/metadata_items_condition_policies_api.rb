@@ -2,7 +2,7 @@
 
 require 'rest-client'
 require 'json'
-require_relative '../configs/gs/env'
+require_relative '../../configs/env'
 
 class MetadataItemsConditionPoliciesApi
   URL = 'https://api.sandbox.ebay.com/sell/metadata/v1/'
