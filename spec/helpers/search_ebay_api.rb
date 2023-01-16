@@ -16,4 +16,8 @@ class SearchEbayApi
       "#{URL}item_summary/search?q=#{item}&limit=3&category_ids=171485&fieldgroups=ASPECT_REFINEMENTS,CATEGORY_REFINEMENTS,CONDITION_REFINEMENTS,BUYING_OPTION_REFINEMENTS", Authorization: "Bearer #{TOKEN}"
     )
   end
+
+  def search_with_filter(product, category_id, color)
+    RestClient.get("#{URL}item_summary/search?q=#{product}&aspect_filter=categoryId:#{category_id},Color:#{color}", Authorization: "Bearer #{TOKEN}")
+  end
 end
