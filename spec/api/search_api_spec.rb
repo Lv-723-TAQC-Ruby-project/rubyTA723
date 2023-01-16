@@ -33,5 +33,18 @@ describe 'Ebay API' do
       expect(search_result['refinement']).to include('categoryDistributions' => [{ 'categoryId' => '171485',
                                                                                    'categoryName' => 'Tablets & eBook Readers', 'refinementHref' => 'https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search?q=macbook&limit=3&fieldgroups=ASPECT_REFINEMENTS%2CCATEGORY_REFINEMENTS%2CCONDITION_REFINEMENTS%2CBUYING_OPTION_REFINEMENTS&category_ids=171485' }])
     end
+
+    before do
+      @response_shirt = SearchEbayApi.new.search_with_filter('shirt', '15724', 'Red')
+    end
+
+    let(:search_result_shirt) { JSON(@response_shirt.body) }
+    it 'checks response code of filtered product ' do
+      expect(@response_shirt.code).to eq 200
+    end
+
+    # it 'checks response body' do
+    #   expect(search_result_shirt['itemSummaries']).to include (["filtered_page_href" => "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search?q=shirt&aspect_filter=categoryId:15724,Color:{Red}"])
+    # end
   end
 end
