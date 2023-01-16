@@ -20,17 +20,17 @@ describe 'Ebay API' do
 
   context 'when search refinements' do
     before do
-      @response = SearchEbayApi.new.search_refinements('macbook')
+      @response_macbook = SearchEbayApi.new.search_refinements('macbook')
     end
 
-    let(:search_result) { JSON(@response.body) }
+    let(:search_result_macbook) { JSON(@response_macbook.body) }
 
     it 'checks response code of refinements of items' do
-      expect(@response.code).to eq 200
+      expect(@response_macbook.code).to eq 200
     end
 
     it 'checks response body' do
-      expect(search_result['refinement']).to include('categoryDistributions' => [{ 'categoryId' => '171485',
+      expect(search_result_macbook['refinement']).to include('categoryDistributions' => [{ 'categoryId' => '171485',
                                                                                    'categoryName' => 'Tablets & eBook Readers', 'refinementHref' => 'https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search?q=macbook&limit=3&fieldgroups=ASPECT_REFINEMENTS%2CCATEGORY_REFINEMENTS%2CCONDITION_REFINEMENTS%2CBUYING_OPTION_REFINEMENTS&category_ids=171485' }])
     end
 
@@ -43,8 +43,8 @@ describe 'Ebay API' do
       expect(@response_shirt.code).to eq 200
     end
 
-    # it 'checks response body' do
-    #   expect(search_result_shirt['itemSummaries']).to include (["filtered_page_href" => "https://api.sandbox.ebay.com/buy/browse/v1/item_summary/search?q=shirt&aspect_filter=categoryId:15724,Color:{Red}"])
-    # end
+    it 'checks response body' do
+      expect(search_result_shirt['itemSummaries'][0]).to include ( {"itemId" => "v1|110552800458|410108660405", "title" => "Shirt2", "topRatedBuyingExperience" => false})
+    end
   end
 end
