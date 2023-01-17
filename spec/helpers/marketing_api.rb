@@ -1,3 +1,9 @@
+# frozen_string_literal: true
+
+require 'rest-client'
+require 'json'
+require_relative '../configs/env'
+
 class MarketingApi
   URL = 'https://api.sandbox.ebay.com/buy/marketing/v1_beta'
 
