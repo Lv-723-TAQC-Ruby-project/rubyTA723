@@ -2,7 +2,8 @@ Feature: As a guest user I want to be able find items in search
 
   Scenario Outline: Searching items
     Given I am on the Ebay main page
-    When I search an item <item>
+    When I type <item> in search field
+    And  I click search button
     Then I expect to see search results <search results>
 
     Examples:

@@ -1,4 +1,4 @@
-Feature: I want to choose shop category and filter items on page
+Feature: As a guest user I want to choose shop by category and filter items on page
 
   Scenario: Shop by category
     Given I am on the Ebay main page

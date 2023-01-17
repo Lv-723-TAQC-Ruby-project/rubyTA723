@@ -2,6 +2,9 @@
 
 When('I type {string} in search field') do |search_word|
   @home_page.header.type_to_search_field(search_word)
+end
+
+When('I click search button') do
   @home_page.header.click_search_button
 end
 
