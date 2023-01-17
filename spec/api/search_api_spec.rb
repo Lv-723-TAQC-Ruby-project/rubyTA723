@@ -44,7 +44,8 @@ describe 'Ebay API' do
     end
 
     it 'checks response body' do
-      expect(search_result_shirt['itemSummaries'][0]).to include ({"itemId" => "v1|110552800458|410108660405", "title" => "Shirt2", "topRatedBuyingExperience" => false})
+      expect(search_result_shirt['itemSummaries'][0]).to include({'itemId' => 'v1|110552800458|410108660405',
+                                                                  'title' => 'Shirt2', 'topRatedBuyingExperience' => false})
     end
   end
 end
