@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
 describe 'Item: Browse Api' do
+  before(:all) do
+    response = Auth.new.log_in(CLIENT_ID, CLIENT_SECRET, SCOPE_API)
+    @token = JSON(response.body)['access_token']
+  end
   context 'when get item by legacy id' do
     before(:all) do
-      @response = RequestApi.new.get_by_legacy_id(110_552_832_245)
+      @response = RequestApi.new(@token).get_by_legacy_id(110_552_832_245)
     end
 
     let(:response_body) { JSON(@response.body) }
@@ -20,7 +24,7 @@ describe 'Item: Browse Api' do
 
   context 'when get item summary', :test do
     before(:all) do
-      @response = SearchEbayApi.new.search_for('lg')
+      @response = SearchEbayApi.new(@token).search_for('lg')
     end
 
     let(:search_result) { JSON(@response.body) }
@@ -37,7 +41,7 @@ describe 'Item: Browse Api' do
 
   context 'when search for item refinements', :test do
     before(:all) do
-      @response = SearchEbayApi.new.search_refinements('macbook')
+      @response = SearchEbayApi.new(@token).search_refinements('macbook')
     end
 
     let(:response_body) { JSON(@response.body) }

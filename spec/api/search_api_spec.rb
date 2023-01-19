@@ -2,8 +2,8 @@
 
 describe 'Ebay API' do
   before(:all) do
-    responce = Auth.new.log_in(CLIENT_ID, CLIENT_SECRET, SCOPE_API)
-    @token = JSON(responce.body)['access_token']
+    response = Auth.new.log_in(CLIENT_ID, CLIENT_SECRET, SCOPE_API)
+    @token = JSON(response.body)['access_token']
   end
 
   context 'when search' do
